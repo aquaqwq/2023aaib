@@ -1,0 +1,19 @@
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        N = len(s)
+        a = s[ :N//2]
+        b = s[N//2: ]
+        motherA = 0
+        motherB = 0
+        for c in a:
+            if c=='a' or c=='i' or c=='o' or c=='u':
+                motherA += 1
+            if c=='A' or c=='I' or c=='O' or c=='U':
+                motherA += 1
+        for c in b:
+            if c=='a' or c=='i' or c=='o' or c=='u':
+                motherB += 1
+            if c=='A' or c=='I' or c=='O' or c=='U':
+                motherB += 1
+        if motherA == motherB: return True
+        else: return false
